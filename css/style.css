@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    background: #333;
+    padding: 1rem;
+    color: white;
+}
+
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer {
+    background: #333;
+    padding: 1rem;
+    color: white;
+}
+
+.shop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.product {
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px; 
+}
+
+.product img {
+    aspect-ratio: 16/9;
+    object-fit: contain;
+}
