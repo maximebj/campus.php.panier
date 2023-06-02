@@ -10,15 +10,15 @@
 
 <?php if (count($products) > 0): ?>
     <div class="shop">
-        <?php foreach($products as $key => $product): ?>
+        <?php foreach($products as $productKey => $product): ?>
             <div class="product">
-                <img src="<?= $product['image'] ?>" alt="<?= $product["title"] ?>">
-                <h2><?= $product['title'] ?></h2>
-                <p><?= $product['price'] ?> €</p>
-                <p><?= $product['description'] ?></p>
+                <img src="<?= $product['image'] ?>" alt="<?php echo $product["title"] ?>">
+                <h2><?php echo $product['title'] ?></h2>
+                <p><?php echo formatPrice(getPriceWithTax($product['price'])) ?></p>
+                <p><?php echo $product['description'] ?></p>
                 
                 <form action="cart.php" method="post">
-                    <input type="hidden" name="product" value="<?= $key ?>">
+                    <input type="hidden" name="product" value="<?php echo $productKey ?>">
                     <input type="number" name="quantity" value="1" min="1">
                     
                     <?php if ($product["available"]): ?>
